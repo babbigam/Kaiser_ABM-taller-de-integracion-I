@@ -12,6 +12,7 @@
 
 #navegador{
     display: grid;
+    height: 50px;
     grid-column-start: 1; 
     grid-column-end: 3; 
     grid-row-start: 1; 
@@ -22,6 +23,7 @@
     display: grid;
     text-align: center;
     border: 1px solid #000;
+    height: 700px;
     grid-column-start: 1; 
     grid-column-end: 3; 
     grid-row-start: 2; 
@@ -32,6 +34,7 @@
     display: grid;
     text-align: justify;
     border: 1px solid #000;
+    height: 750px;
     grid-column-start: 1; 
     grid-column-end: 3; 
     grid-row-start: 4; 
@@ -43,6 +46,7 @@
     background-color: #304a6e;
     text-align: center;
     border: 1px solid #000;
+    height: 400px;
     grid-column-start: 1; 
     grid-column-end: 3; 
     grid-row-start: 13; 
@@ -55,6 +59,7 @@
     text-align: justify;
     border: 1px solid #000;
     padding: 5px;
+    background: #668dc0;
     grid-column-start: 1; 
     grid-column-end: 1; 
     grid-row-start: 1; 
@@ -67,6 +72,7 @@
     text-align: center;
     border: 1px solid #000;
     padding: 5px;
+    background: #668dc0;
     grid-column-start: 2; 
     grid-column-end: 4; 
     grid-row-start: 1; 
@@ -79,6 +85,7 @@
     text-align: end;
     border: 1px solid #000;
     padding: 5px;
+    background: #668dc0;
     grid-column-start: 4; 
     grid-column-end: 4; 
     grid-row-start: 1; 
@@ -89,7 +96,6 @@
     display: grid;
     color: #0f1c3d;
     text-align: center;
-    border: 1px solid #000;
     padding: 5px;
     grid-column-start: 1; 
     grid-column-end: 4; 
@@ -111,63 +117,73 @@
 
 .informacion-c{
     display: grid;
-    color: #668dc0;
+    color: #c2c6ce;
     text-align: center;
     border: 1px solid #000;
     padding: 5px;
+    margin: 5px;
+    background: #668dc0;
     grid-column-start: 1; 
     grid-column-end: 2; 
     grid-row-start: 1; 
-    grid-row-end: 4;
+    grid-row-end: 5;
 }
 
 
 .m1{
     display: grid;
-    color: #668dc0;
+    color: #c2c6ce;
     text-align: center;
     border: 1px solid #000;
     padding: 5px;
+    margin: 5px;
+    background: #668dc0;
     grid-column-start: 2; 
     grid-column-end: 3; 
     grid-row-start: 1; 
-    grid-row-end: 2;
+    grid-row-end: 3;
 }
 
 .m2{
     display: grid;
-    color: #668dc0;
+    color: #c2c6ce;
     text-align: center;
     border: 1px solid #000;
     padding: 5px;
+    margin: 5px;
+    background: #668dc0;
     grid-column-start: 2; 
     grid-column-end: 3; 
     grid-row-start: 3; 
-    grid-row-end: 4;
+    grid-row-end: 5;
 }
 
 .informacion-r{
     display: grid;
-    color: #668dc0;
+    color: #c2c6ce;
     text-align: center;
     border: 1px solid #000;
     padding: 5px;
+    margin: 5px;
+    background: #305280;
     grid-column-start: 1; 
     grid-column-end: 2; 
     grid-row-start: 5; 
-    grid-row-end: 8;
+    grid-row-end: 9;
 }
 
 .formulario{
     display: grid;
-    color: #668dc0;
+    color: #c2c6ce;
     text-align: center;
     border: 1px solid #000;
     padding: 5px;
+    margin: 5px;
+    background: #305280;
     grid-column-start: 2; 
     grid-column-end: 3; 
     grid-row-start: 5; 
-    grid-row-end: 8;
+    grid-row-end: 9;
 }
 
 .conocer{
@@ -176,10 +192,11 @@
     text-align: center;
     border: 1px solid #000;
     padding: 5px;
+    background: #1a3069;
     grid-column-start: 1; 
     grid-column-end: 2; 
-    grid-row-start: 9; 
-    grid-row-end: 9;
+    grid-row-start: 1; 
+    grid-row-end: 1;
 }
 
 .Pol-pri{
@@ -188,10 +205,11 @@
     text-align: center;
     border: 1px solid #000;
     padding: 5px;
+    background: #1a3069;
     grid-column-start: 2; 
     grid-column-end: 3; 
-    grid-row-start: 9; 
-    grid-row-end: 9;
+    grid-row-start: 1; 
+    grid-row-end: 1;
 }
 
 .direccion{
@@ -200,10 +218,11 @@
     text-align: center;
     border: 1px solid #000;
     padding: 5px;
+    background: #1a3069;
     grid-column-start: 1; 
     grid-column-end: 2; 
-    grid-row-start: 10; 
-    grid-row-end: 10;
+    grid-row-start: 2; 
+    grid-row-end: 2;
 }
 
 .correo{
@@ -212,10 +231,11 @@
     text-align: center;
     border: 1px solid #000;
     padding: 5px;
+    background: #1a3069;
     grid-column-start: 2; 
     grid-column-end: 3; 
-    grid-row-start: 10; 
-    grid-row-end: 10;
+    grid-row-start: 2; 
+    grid-row-end: 2;
 }
 
 .ter-con{
@@ -224,10 +244,11 @@
     text-align: center;
     border: 1px solid #000;
     padding: 5px;
+    background: #1a3069;
     grid-column-start: 1; 
     grid-column-end: 2; 
-    grid-row-start: 11; 
-    grid-row-end: 11;
+    grid-row-start: 3; 
+    grid-row-end: 3;
 }
 
 .sucursales{
@@ -236,12 +257,9 @@
     text-align: center;
     border: 1px solid #000;
     padding: 5px;
+    background: #1a3069;
     grid-column-start: 2; 
     grid-column-end: 3; 
-    grid-row-start: 11; 
-    grid-row-end: 11;
+    grid-row-start: 3; 
+    grid-row-end: 3;
 }
-
-/*grid-template-rows: 100px;
-  grid-template-columns: 100px;
-  background-color: #304a6e;*/
