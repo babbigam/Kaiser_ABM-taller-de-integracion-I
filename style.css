@@ -114,7 +114,6 @@
     grid-row-end: 2;
 }
 
-
 .informacion-c{
     display: grid;
     color: #c2c6ce;
@@ -128,7 +127,6 @@
     grid-row-start: 1; 
     grid-row-end: 5;
 }
-
 
 .m1{
     display: grid;
