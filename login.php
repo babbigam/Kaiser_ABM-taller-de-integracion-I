@@ -4,7 +4,7 @@
     if (isset($_SESSION['user_id'])) {
         header('Location: /php/proyecto/main.php');
     }
-  require 'dataconect.php';
+  require 'connectbd.php';
 
     if (!empty($_POST['email']) && !empty($_POST['password'])) {
         $records = $conn->prepare('SELECT id, email, password FROM users WHERE email = :email');
