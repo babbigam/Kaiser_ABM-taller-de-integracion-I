@@ -12,7 +12,7 @@
     <nav id="navegador">
         <h3 class="logo">Logo</h3>
         <h3 class="menu">Menu</h3>
-        <h3 class="usuario">Usuario</h3>
+        <h3 class="usuario">Bienvenido Usuario</h3>
     </nav>
     <header id="cabeza">
         <!--Encabezado-->
