@@ -1,9 +1,9 @@
 <?php
-    session_start();
+    session_start(); /*se inicia la session */
 
-    session_unset();
+    session_unset(); /*se quita o apaga la session */
 
-     session_destroy();
+     session_destroy();  /*se destruye o elimina la session */
 
-    header('Location: historial.php');
+    header('Location: historial.php'); 
 ?>

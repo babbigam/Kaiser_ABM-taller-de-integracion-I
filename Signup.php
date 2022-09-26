@@ -1,28 +1,17 @@
 <?php 
-    session_start();
-    require 'localhost/connectbd.php';
-        if (isset($_SESSION['user_id'])) {
-        $records = $con->prepare('SELECT id, email, password FROM users WHERE id = :id');
-        $records->bindParam(':id', $_SESSION['user_id']);
-        $records->execute();
-        $results = $records->fetch(PDO::FETCH_ASSOC);
-        $user = null;
-        if (count($results) > 0) {
-        $user = $results;
-        }
-    }
     require 'localhost/connectbd.php';
     $message = '';
 
-    if (!empty($_POST['email']) && !empty($_POST['password'])) {
-        $sql = "INSERT INTO users (email, password) VALUES (:email, :password)";
-        $stmt = $con->prepare($sql);
-        $stmt->bindParam(':email', $_POST['email']);
-        $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-        $stmt->bindParam(':password', $password);
+    if (!empty($_POST['email']) && !empty($_POST['password'])) {  /*si los campos recibidos no estan vacios en los input, */
+        $sql = "INSERT INTO users (email, password) VALUES (:email, :password)"; /* crea una variable sql y los agrega a la base datos*/
+        $stmt = $con->prepare($sql); /* crea variable stmt y hace que la coneccion ejecute la consulta*/
+        $stmt->bindParam(':email', $_POST['email']); /*vincula los parametros de email en lo que se recibe en el input de email */
+        $password = password_hash($_POST['password'], PASSWORD_BCRYPT); /*encrita la contraseña */
+        $stmt->bindParam(':password', $password); /*vincula la contraseña el parametro contraseña con la ingresada y encriptada */
   
     if ($stmt->execute()) {
-        $message = 'Usuario creado exitosamente';
+        $message = 'Usuario creado exitosamente'; /*se ejecuto correctamente  */
+        header('Location: login.php');
     } else {
         $message = 'Error al crear usuario';
       }
