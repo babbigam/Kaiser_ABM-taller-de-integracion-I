@@ -1,14 +1,27 @@
+<?php
+    session_start(); /*iniciamos la seccion */
+    require 'localhost/connectbd.php'; /*llama a la coneccion  */
+    if (isset($_SESSION['user_id'])) { /*si existe la variable seccion  */
+        $records = $con->prepare('SELECT id, email, password FROM users WHERE id = :id'); /*se hace una consulta para los demas datos */
+        $records->bindParam(':id', $_SESSION['user_id']); /*se vinculan los parametros de id */
+        $records->execute(); /*se ejecuta */
+        $results = $records->fetch(PDO::FETCH_ASSOC); /*se almacena la consulta */
+        $user = null; /*se crea una variable  */
+    if (count($results) > 0) { /* */
+      $user = $results;  /*se almacenan los resultados en user */
+    }
+    }
+?>
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content= "ie=edge chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K.A.B.M.</title>
     <link rel="stylesheet" href="assets/css/style.css"> 
-</head> <!--comentario-->
+    <title>Historial</title>
+</head>
 <body id="contenedor">
-
+    <div> <?php require "assets/menuaside.php" ?></div>
     <!--Menu-->
     <nav id="navegador">
         <h3 class="logo">Logo</h3>
@@ -18,7 +31,7 @@
     <header id="cabeza">
         <!--Encabezado-->
         <h2 class="imagen">imagen</h2>         
-        <h2 class="nombre">Kaiser Administrative Business Management</h1>
+        <h2 class="nombre">Historial</h1>
     </header>
     <main id="cuerpo">
         <!--Principal-->
