@@ -2,7 +2,7 @@
   session_start();
 
     if (isset($_SESSION['user_id'])) {
-        header('Location: /php/proyecto/main.php');
+        header('Location: historial.php');
     }
   require 'connectbd.php';
 
@@ -16,7 +16,7 @@
 
     if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
         $_SESSION['user_id'] = $results['id'];
-        header("Location: /php/proyecto/main.php");
+        header("Location: historial.php");
     } else {
         $message = 'Las credenciales no coinciden';
     }
