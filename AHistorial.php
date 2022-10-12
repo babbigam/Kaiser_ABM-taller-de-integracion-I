@@ -1,27 +1,17 @@
 <?php
-    session_start();
-    require 'localhost/connectbd.php';
-    if (isset($_SESSION['user_id'])) {
-        $records = $con->prepare('SELECT id, email, password FROM users WHERE id = :id');
-        $records->bindParam(':id', $_SESSION['user_id']);
-        $records->execute();
-        $results = $records->fetch(PDO::FETCH_ASSOC);
-        $user = null;
-    if (count($results) > 0) {
-      $user = $results;
-    }
-    }
+  require 'assets/js/sessionstart.php'; 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/css/style.css"> 
-    <title>Registro de capacitaciones</title>
+    <link rel="stylesheet" href="assets/css/stylemenu.css"> 
+    <link rel="stylesheet" href="assets/css/styles.css"> 
+    <title>Historial</title>
 </head>
 <body id="contenedor">
-    <div> <?php require "assets/menuaside.php" ?></div>
+    <div> <?php require "assets/js/menuaside.php" ?></div>
     <!--Menu-->
     <nav id="navegador">
         <h3 class="logo">Logo</h3>
@@ -31,7 +21,7 @@
     <header id="cabeza">
         <!--Encabezado-->
         <h2 class="imagen">imagen</h2>         
-        <h2 class="nombre">Registro de capacitaciones</h1>
+        <h2 class="nombre">Historial</h1>
     </header>
     <main id="cuerpo">
         <!--Principal-->

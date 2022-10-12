@@ -1,27 +1,17 @@
 <?php
-    session_start(); /*iniciamos la seccion */
-    require 'localhost/connectbd.php'; /*llama a la coneccion  */
-    if (isset($_SESSION['user_id'])) { /*si existe la variable seccion  */
-        $records = $con->prepare('SELECT id, email, password FROM users WHERE id = :id'); /*se hace una consulta para los demas datos */
-        $records->bindParam(':id', $_SESSION['user_id']); /*se vinculan los parametros de id */
-        $records->execute(); /*se ejecuta */
-        $results = $records->fetch(PDO::FETCH_ASSOC); /*se almacena la consulta */
-        $user = null; /*se crea una variable  */
-    if (count($results) > 0) { /* */
-      $user = $results;  /*se almacenan los resultados en user */
-    }
-    }
+  require 'assets/js/sessionstart.php'; 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/css/style.css"> 
-    <title>Historial</title>
+    <link rel="stylesheet" href="assets/css/stylemenu.css"> 
+    <link rel="stylesheet" href="assets/css/styles.css"> 
+    <title>Registro de capacitaciones</title>
 </head>
 <body id="contenedor">
-    <div> <?php require "assets/menuaside.php" ?></div>
+    <div> <?php require "assets/js/menuaside.php" ?></div>
     <!--Menu-->
     <nav id="navegador">
         <h3 class="logo">Logo</h3>
@@ -31,7 +21,7 @@
     <header id="cabeza">
         <!--Encabezado-->
         <h2 class="imagen">imagen</h2>         
-        <h2 class="nombre">Historial</h1>
+        <h2 class="nombre">Registro de capacitaciones</h1>
     </header>
     <main id="cuerpo">
         <!--Principal-->
