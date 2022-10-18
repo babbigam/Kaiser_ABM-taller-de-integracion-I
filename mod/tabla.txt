@@ -1,0 +1,124 @@
+<table class="datatable">
+                    <thead>
+                        <tr>
+                            <th>a</th>
+                        <!-- <th>b</th> -->
+                            <th>RUT</th>
+                            <th>Nombres</th>
+                            <th>Apellido materno</th>
+                            <th>Apellido paterno</th>
+                            <th>Email</th>
+                            <th>Nacionalidad</th>
+                            <th>Domicilio</th>
+                            <th>Ciudad</th>
+                            <th>Comuna</th>
+                            <th>Celular</th>
+                            <th>Estado Civil</th>
+                            <th>Fecha de nacimiento</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="checkboxs-col">
+                                <input type="checkbox" name="" id="">
+                            </td> 
+                        <!-- <td>
+                                <span class="en-funciones"></span>
+                            </td> -->
+                            <td>c</td>
+                            <td>d</td>
+                            <td>e</td>
+                            <td>f</td>
+                            <td>g</td>
+                            <td>h</td>
+                            <td>i</td>
+                            <td>j</td>
+                            <td>k</td>
+                            <td>l</td>
+                            <td>m</td>
+                            <td>n</td>
+                        </tr> 
+                        <tr>
+                            <td class="checkboxs-col">
+                                <input type="checkbox" name="" id="">
+                            </td>
+                        <!-- <td>
+                                <span class="licencia"></span>
+                            </td> -->
+                            <td>c</td>
+                            <td>d</td>
+                            <td>e</td>
+                            <td>f</td>
+                            <td>g</td>
+                            <td>h</td>
+                            <td>i</td>
+                            <td>j</td>
+                            <td>k</td>
+                            <td>l</td>
+                            <td>m</td>
+                            <td>n</td>
+                        </tr>
+                        <tr>
+                            <td class="checkboxs-col">
+                                <input type="checkbox" name="" id="">
+                            </td>
+                        <!-- <td>
+                                <span class="vacaciones"></span>
+                            </td> -->
+                            <td>c</td>
+                            <td>d</td>
+                            <td>e</td>
+                            <td>f</td>
+                            <td>g</td>
+                            <td>h</td>
+                            <td>i</td>
+                            <td>j</td>
+                            <td>k</td>
+                            <td>l</td>
+                            <td>m</td>
+                            <td>n</td>
+                        </tr>
+                        <tr>
+                            <td class="checkboxs-col">
+                                <input type="checkbox" name="" id="">
+                            </td>
+                        <!-- <td>
+                                <span class="vacaciones"></span>
+                            </td> -->
+                            <td>c</td>
+                            <td>d</td>
+                            <td>e</td>
+                            <td>f</td>
+                            <td>g</td>
+                            <td>h</td>
+                            <td>i</td>
+                            <td>j</td>
+                            <td>k</td>
+                            <td>l</td>
+                            <td>m</td>
+                            <td>n</td>
+                        </tr>
+                        <tr>
+                            <td class="checkboxs-col">
+                                <input type="checkbox" name="" id="">
+                            </td>
+                        <!-- <td>
+                                <span class="vacaciones"></span>
+                            </td> -->
+                            <td>c</td>
+                            <td>d</td>
+                            <td>e</td>
+                            <td>f</td>
+                            <td>g</td>
+                            <td>h</td>
+                            <td>i</td>
+                            <td>j</td>
+                            <td>k</td>
+                            <td>l</td>
+                            <td>m</td>
+                            <td>n</td>
+                        </tr>
+                    </tbody>
+
+                </table>
