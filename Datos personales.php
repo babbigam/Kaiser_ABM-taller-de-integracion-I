@@ -13,6 +13,8 @@
     }
 ?>
 
+<!--HOLI-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +26,7 @@
     <div> <?php require "assets/menuaside.php" ?></div>
     <!--Menu-->
     <nav id="navegador">
-        <h3 class="logo">Logo UWUMMMMMMM</h3>
+        <h3 class="logo">Logo</h3>
         <h3 class="menu">Menu</h3>
         <h3 class="usuario">Usuario</h3>
     </nav>
