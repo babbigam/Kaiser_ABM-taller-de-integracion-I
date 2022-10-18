@@ -46,7 +46,7 @@
 </select>
         <div><button class="boton" type="submit" name="sendlg" value="Send"><p>Registrar</p></button></div>
     </form>
-       <div><span><a href="#">Tabla de usuarios</a></span></div>
+       <div><span><a href="Tabladeusuario.php">Tabla de usuarios</a></span></div>
     </div>
 </body>
 </html>
