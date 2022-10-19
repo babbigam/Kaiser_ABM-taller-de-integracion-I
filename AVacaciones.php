@@ -10,15 +10,9 @@
     <link rel="stylesheet" href="assets/css/styles.css"> 
     <title>Vacaciones</title>
 </head>
-<body id="contenedor">
+<body>
     <div> <?php require "assets/js/menuaside.php" ?></div>
     <!--Menu-->
-    <nav id="navegador">
-        <h3 class="logo">Logo</h3>
-        <h3 class="menu">Menu</h3>
-        <h3 class="usuario">Usuario</h3>
-    </nav>
-    <header id="cabeza">
         <!--Encabezado-->
         <h2 class="imagen">imagen</h2>         
         <h2 class="nombre">Vacaciones</h1>
