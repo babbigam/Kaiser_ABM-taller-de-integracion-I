@@ -29,8 +29,7 @@ body{
 .main-content{
     background-color: rgb(27, 51, 70);
     margin-left: 4rem;
-    width: 56rem;
-    height: 40rem;
+    width: 100%;
     padding: 1rem 1rem 1rem 0.5rem!important;
 }
 
@@ -101,8 +100,14 @@ li:hover{
 }
 
 /*SIDEMENU END*/
-
-
+/* td{
+    background: #99d6f69c;
+    border:0px;
+}
+th{
+    background: #0c4d709c;  
+    border:0px;
+} */
 /*----------------------------------------DATA TABLES----------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
@@ -267,20 +272,24 @@ li:hover{
     width: 100%;
 }
 
-.contenedor-datatable .datatable,
-.contenedor-datatable .datatable th,
-.contenedor-datatable .datatable td{
+
+th td{
     padding: var(--dt-padding) var(--dt-padding);
+    background: #c2eaff9c;
 }
 
-.contenedor-datatable .datatable th{
+th{
     font-weight: bolder;
     text-align: left;
     border-bottom: solid 1px var(--dt-border-color);
+    background: hsla(192, 100%, 42%, 0.612);
+    border: 0px;
 }
 
-.contenedor-datatable .datatable td{
+td{
     border-bottom: solid 1px var(--dt-border-color);
+    background: #8bbaff9c;
+    border:0px;
 }
 
 .contenedor-datatable .datatable tbody tr:nth-child(even){
