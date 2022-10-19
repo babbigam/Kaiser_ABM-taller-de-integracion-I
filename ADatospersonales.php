@@ -16,8 +16,7 @@
     <link rel="stylesheet" href="assets/css/style.css"> 
     <title>Datos personales</title>
 </head>
-<body id="contenedor">
-    <!--MENU-->
+<body>
     <div> <?php require "assets/js/menuaside.php" ?></div>
     <header id="cabeza">
     </header>

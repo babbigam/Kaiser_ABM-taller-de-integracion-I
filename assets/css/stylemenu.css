@@ -1,80 +1,59 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html{
+    font-size: 24px;
 }
-body{
-    background: #101d2f;
-}
-/* MENU */
-.menuicono {
-    width: 2.2rem;
-    height: 2.7rem;
-    background: #648dc1;
-    border-radius: 0.5rem;
-    position: absolute;
-    top: 5%;
-    left: 0%;
-    font-size: 2rem;
-    color: white;
-    text-align: center;
-    transition: left 0.2s;
-}
-.checkbox:checked ~ .menuicono {
-    left: 20%;
-    border-radius: 0 0.5rem 0.5rem;
-}
-.menu-collap{
-    width: 20%;
+
+/*------------------------------SIDE-MENU------------------------------*/
+.sidemenu{
+    position: fixed;  /*FIXED*/
+    width: 2rem;
     height: 100%;
-    background: #648dc1;
+    background-color: rgba(13, 131, 216, 0.817);
+    padding: 2rem;
+    transition: 0.5s;
+    overflow: hidden; /*Oculta texto del menú*/
+}
+
+.sidemenu:hover{
+    width: 12rem;
+}
+.sidemenu ul{
     position: absolute;
-    left: -20%;
+    left: 0;
+    /*top: 20px;*/
+    width: 100%;
+}
+
+.sidemenu ul li{
+    width: 100%;
+    list-style: none;
+    padding-left: 1rem; ;
+}
+
+li:hover{
+    background: rgb(83, 83, 83);
+    align-items: center;
+}
+
+.sidemenu ul li a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    height: 3.5rem;
+}
+
+.sidemenu ul li a .icon{
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: left 0.4s;
+    min-width: 2rem;
 }
 
-.checkbox:checked ~ .menu-collap {
-    left: 0%;
-}
-.checkbox {
-    display: none;
-}
-
-#sidemenu img{
-    border-radius:60%;
-    width: 80%;
-}
-#sidemenu span{
-    font-size: 20px;
-    padding: 20;
-    overflow: hidden;
-    text-align: center;
-    color: rgb(255, 255, 255);
+.sidemenu ul li a .nombremodulo{
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    padding-left: 1.5rem;
+    font-size: 15px;
 }
 
-#sidemenu ul a{
-    text-decoration: none;
-    text-align: center;
-    display: block;
-    color: rgb(255, 255, 255);
-    padding: 10px;
-    font-size: 20px;
-}
-#sidemenu ul{
-    list-style: none;
-    padding-left: 10px;
-}
-
-#sidemenu li ul {
-    outline: 1px solid #059;
-    transition: all .3s;
-}
-
-#sidemenu a:hover{
-    background: #2f486f;
-    border-left: 2px solid white;
-}
-
+/*SIDEMENU END*/
