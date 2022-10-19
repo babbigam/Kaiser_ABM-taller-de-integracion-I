@@ -13,42 +13,69 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/stylemenu.css"> 
-    <link rel="stylesheet" href="assets/css/style.css"> 
+    <link rel="stylesheet" href="assets/css/style2.css"> 
     <title>Datos personales</title>
 </head>
 <body>
     <div> <?php require "assets/js/menuaside.php" ?></div>
-    <header id="cabeza">
-    </header>
+        <!--HEADER-->
+        <header>
 
-    <div class="botonesbusqueda">
+        </header>
 
-    <input type="checkbox" class="checkoption" value="1" onclick="checkedOnClick(this);"> Option1
-    <input type="checkbox" class="checkoption" value="2" onclick="checkedOnClick(this);"> Option2 <br>
-    <input type="checkbox" class="checkoption" value="3" onclick="checkedOnClick(this);"> Option3
-    <input type="checkbox" class="checkoption" value="4" onclick="checkedOnClick(this);"> Option4 <br>
-    <input type="checkbox" class="checkoption" value="5" onclick="checkedOnClick(this);"> Option5
-    <!-- Script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function(){
-    $('.checkoption').click(function() {
-        $('.checkoption').not(this).prop('checked', false);
-    });
-    });
-    </script>    
-    </div>
+        <!--MAIN CONTENT-->
+        <div class="main-content">
 
-    <div class="Busqueda">
+            <!--TABLE-->
+            <div class="contenedor-datatable">
 
-        <form action="" method= "get">
-            <p>RUT</p><input type="text" name="busquedarut"><br>
-            <input type="submit" name="enviar" value="Buscar">
-        </form>
+                <!--TABLE HEADER ELEMENTS-->
+                <div class="datatable-header">
 
-    </div>
-    <div class="tabla">
-        <?php
+                    <!--BUTTONS & CHECKBOXS-->
+                    <div class="tools">
+                        <ul>
+                            <li>
+                                <span>
+                                    <input type="checkbox">
+                                </span>
+                            </li>
+                            <li>
+                                <button>
+                                    <span class="material-symbols-outlined"> add_circle </span>
+                                </button>
+                                
+                            </li>
+                            <li>
+                                <button>
+                                    <span class="material-symbols-outlined">edit </span>      
+                                </button>                          
+                            </li>
+                            <li>
+                                <button>
+                                    <span class="material-symbols-outlined"> delete </span>   
+                                </button>    
+                            </li>
+                            <li>
+                                <button>
+                                    <span class="material-symbols-outlined"> share </span>
+                                </button>
+                                
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--NAV SEARCH BAR-->
+                    <div class="navbar-search">
+                        <input type="text" name="#" id="#" class="input-search">
+                    </div>
+
+                </div>
+
+                <!--DATA TABLE-->
+                <table class="datatable">
+                    <thead>
+                        <?php
         if(mysqli_num_rows($result) > 0)
         {
         $table = '
@@ -88,11 +115,53 @@
         echo $table;
         }
     ?>
-    
-    </div>
+                    </thead>
 
-    <footer id="pie">
-    </footer>
+                    
+                </table>
 
-</body>
+                <!--TABLE FOOTER ELEMENTS-->
+                <div class="datatable-footer">
+                    <div class="items-visibles">
+                        Muestra
+                        <select name="n-entries" id="n-entries" class="n-entries">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                        </select>
+                        Personas
+                    </div>
+
+                    <div class="pages">
+                        <ul>
+                            <li>
+                                <button>
+                                    <span class="active">1</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button>2</button>
+                            </li>
+                            <li>
+                                <button>3</button>
+                            </li>
+                            <li>
+                                <button>4</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filters">
+
+            </div>
+
+            <div class="footer">
+
+            </div>
+        </div>
+
+        
+    </body>
 </html>

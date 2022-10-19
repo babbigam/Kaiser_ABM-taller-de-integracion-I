@@ -1,0 +1,300 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    font-size: 24px;
+}
+
+body{
+    font-size: 16px;
+    /*background-image: url(Img/office.png);*/
+    background-size: 160rem;
+    background-repeat: no-repeat;
+    width: 50rem;
+    height: 40rem;
+}
+
+@media(min-width: 1920px){
+    body{
+        background-size: 200rem;
+    }
+}
+
+/*----------------------------------------MAIN-CONTENT----------------------------------------*/
+
+.main-content{
+    background-color: rgb(27, 51, 70);
+    margin-left: 4rem;
+    width: 56rem;
+    height: 40rem;
+    padding: 1rem 1rem 1rem 0.5rem!important;
+}
+
+/* .main-content .filters{
+    display: flex;
+    background-color: rgba(221, 221, 247, 0.25);
+    margin-left: 0.5rem;
+    height: 38rem;
+    width: 12rem;
+    padding: 0!important;
+    top: 2rem;
+} */
+
+
+
+/*------------------------------SIDE-MENU------------------------------*/
+.sidemenu{
+    position: fixed;  /*FIXED*/
+    width: 2rem;
+    height: 100%;
+    background-color: rgba(13, 131, 216, 0.817);
+    padding: 2rem;
+    transition: 0.5s;
+    overflow: hidden; /*Oculta texto del menú*/
+}
+
+.sidemenu:hover{
+    width: 12rem;
+}
+.sidemenu ul{
+    position: absolute;
+    left: 0;
+    /*top: 20px;*/
+    width: 100%;
+}
+
+.sidemenu ul li{
+    width: 100%;
+    list-style: none;
+    padding-left: 1rem; ;
+}
+
+li:hover{
+    background: rgb(83, 83, 83);
+    align-items: center;
+}
+
+.sidemenu ul li a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    height: 3.5rem;
+}
+
+.sidemenu ul li a .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2rem;
+}
+
+.sidemenu ul li a .nombremodulo{
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    padding-left: 1.5rem;
+    font-size: 15px;
+}
+
+/*SIDEMENU END*/
+
+
+/*----------------------------------------DATA TABLES----------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+/*----------Variables----------*/
+:root{
+    --primary-color:rgb(0, 0, 0);
+    --secondary-color: rgb(255, 255, 255);
+    --highlight-color: rgb(, 156, 177);
+    
+    --dt-status-available-color:green;
+    --dt-status-away-color: lightsalmon;
+    --dt-status-offline-color: lightgray;
+
+    --dt-padding: 12px;
+    --dt-padding-s: 6px;
+    --dt-padding-xs:2px;
+
+    --dt-border-radius:3px;
+
+    --dt-background-color-container: #99d6f69c;
+    --dt-border-color: var(--secondary-color);
+    --dt-bg-color:var(--highlight-color);
+    --dt-text-color:var(--primary-color);
+    --dt-bg-active-button: var(--highlight-color);
+    --dt-text-color-button: var(--primary-color);
+    --dt-text-color-active-button: var(--primary-color);
+    --dt-hover-cell-color: var(--highlight-color);
+    --dt-even-row-color: var(--secondary-color);
+    --dt-focus-color: var(--highlight-color);
+    --dt-input-background-color: var(--secondary-color);
+    --dt-input-color: var(--primary-color);
+}
+
+.material-icons{
+    font-size: 16px;
+}
+
+/*----------CONTENEDOR PRINCIPAL----------*/
+.contenedor-datatable{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--dt-background-color-container);
+    border-radius: var(--dt-border-radius);
+    color: var(--dt-text-color);
+    width: 1150px;
+    margin-left: 0;
+    font-size: 12px;
+    position: static;
+    right: 2rem;
+    
+}
+
+/*----------DATA-TABLE-HEADER----------*/
+.contenedor-datatable .datatable-header{
+    border-bottom: solid 1px var(--dr-border-color);
+    padding: var(--dt-padding);
+    display: flex;
+    align-items: baseline;
+}
+
+.contenedor-datatable .datatable-header .navbar-search{
+    width: 30%;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' -25,
+  'opsz' 48
+}
+
+
+
+.contenedor-datatable .datatable-header .navbar-search .input-search{
+    width: 100%;
+    background-color: var(--dt-input-background-color);
+    display: block;
+    box-sizing: border-box;
+    border-radius: var(--dt-border-radius);
+    border: solid 1px var(--dt-border-color);
+    color: var(--dt-input-color);
+}
+
+.contenedor-datatable .datatable-header .tools{
+    width: 70%;
+}
+
+.contenedor-datatable .datatable-header .tools ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+}
+
+.contenedor-datatable .datatable-header .tools ul li{
+    display: inline-block;
+    margin: 0 var(--dt-padding-xs);
+    align-items: baseline;
+}
+
+/*----------DATA-TABLE-FOOTER----------*/
+.contenedor-datatable .datatable-footer{
+    padding: var(--dt-padding);
+    display: flex;
+    align-items: baseline;
+}
+
+.contenedor-datatable .datatable-footer .pages ul li{
+    list-style:none;
+}
+
+.contenedor-datatable .datatable-footer .items-visibles{
+    width: 50%;
+}
+.contenedor-datatable .datatable-footer .pages{
+    margin-left: auto;
+    margin-right: 0;
+    width: 50%;
+}
+
+.contenedor-datatable .datatable-footer .pages ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+}
+
+.contenedor-datatable .datatable-header .tools ul li button,
+.contenedor-datatable .datatable-footer .pages ul li button{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--dt-text-color-button);
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: var(--dt-border-radius);
+    background: transparent;
+    cursor: pointer;
+}
+
+.contenedor-datatable .datatable-header .tools ul li button:hover,
+.contenedor-datatable .datatable-footer .pages ul li button:hover{
+    background: var(--dt-bg-active-button);
+    color: var(--dt-text-color-active-button);
+}
+
+.contenedor-datatable .datatable-footer .pages ul li span .active{
+    background-color: var(--dt-bg-color);
+    border-radius: var(--dt-border-radius);
+}
+
+.contenedor-datatable .datatable-header .tools ul li button,
+.contenedor-datatable .datatable-footer .pages ul li button,
+.contenedor-datatable .datatable-footer .pages ul li span{
+    padding: var(--dt-padding-s) var(--dt-padding);
+}
+
+/*----------DATA-TABLE----------*/
+.contenedor-datatable .datatable{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.contenedor-datatable .datatable,
+.contenedor-datatable .datatable th,
+.contenedor-datatable .datatable td{
+    padding: var(--dt-padding) var(--dt-padding);
+}
+
+.contenedor-datatable .datatable th{
+    font-weight: bolder;
+    text-align: left;
+    border-bottom: solid 1px var(--dt-border-color);
+}
+
+.contenedor-datatable .datatable td{
+    border-bottom: solid 1px var(--dt-border-color);
+}
+
+.contenedor-datatable .datatable tbody tr:nth-child(even){
+    background-color: var(--dt-even-row-color);
+}
+
+.contenedor-datatable .datatable tbody tr:hover{
+    background-color: var(--dt-hover-cell-color);
+}
+
+/*.contenedor-datatable .datatable tbody tr .en-funciones::after,
+.contenedor-datatable .datatable tbody tr .licencia::after,
+.contenedor-datatable .datatable tbody tr .vacaciones::after{
+    display: inline-table;
+    vertical-align: middle;
+}
+    ---COLUMNA ESTADO*/
