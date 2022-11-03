@@ -1,12 +1,13 @@
 <?php
 try {
-    $conte = mysqli_connect("localhost", "root", "", "kaiserabm");  /*la variable $con es donde se almacena la base de datos */
+    $conte = mysqli_connect("localhost", "root", "", "kaiserabm");  /*la variable $conte es donde se almacena la base de datos */
   } catch (PDOException $e) {
     die('Connection Failed: ' . $e->getMessage()); /*finaliza el proceso y muestra el error */
   }
 
-  $queryt = "SELECT * FROM `users`";
-    $resultt = mysqli_query($conte, $queryt);
+$queryt = "SELECT * FROM `users`";
+$resultt = mysqli_query($conte, $queryt);
+
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +16,7 @@ try {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styletablausuario.css">
     <title>Tabla de usuario</title>
 </head>
 <body>
@@ -41,6 +43,11 @@ try {
             echo $tableu;
             }
         ?>
+    </div>
+    <div class="botones">
+        <span><a href="Editarcontraseña.php" value="botom"><input type="submit" name="submit" value="Editar contraseña"/></a></span>
+        <span><a href="Signup.php" value="botom"><input type="submit" name="submit" value="craer usuario"/></a></span>
+        <span><a href="Eliminarusuario.php" value="botom"><input type="submit" name="submit" value="Eliminar usuario"/></a></span>
     </div>
 </body>
 </html>

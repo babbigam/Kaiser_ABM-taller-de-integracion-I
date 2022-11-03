@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #648dc1;
+}
+
+.tabla-usuario{
+    margin: 300px 0px 0px 625px;
+    text-align: center;
+}
+
+td{
+    background: #c2d0ef;
+    border: 0px;
+}
+
+th{
+    background: #94b2f4;
+    border: 0px;
+}
+
+.botones{
+    margin: 10px 0px 0px 585px;
+}
