@@ -94,7 +94,7 @@
                             <table border=1>      									
                                 <tr>
                                     <th>ID_capacitacion</th>
-                                    <th>Nombres</th>
+                                    <th>tema</th>
                                     <th>fecha</th>
                                     <th>expositor</th>
                                     <th>duracion</th>
