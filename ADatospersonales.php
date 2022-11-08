@@ -6,6 +6,7 @@
     require 'localhost/ConBDPersonal.php';
     $query = "SELECT * FROM `datos_personales`";
     $result = mysqli_query($conn, $query);
+
 ?>
 
 <!DOCTYPE html>
@@ -13,77 +14,48 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/stylemenu.css"> 
-    <link rel="stylesheet" href="assets/css/style.css"> 
+    <link rel="stylesheet" href="assets/css/stylee.css"> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,-25" />
     <title>Datos personales</title>
 </head>
 <body>
         <div> <?php require "assets/js/menuaside.php" ?></div>
-        <!--MAIN CONTENT-->
+        <header>    
+        </header>
+
         <div class="main-content">
-
-            <!--HEADER-->
-            <header>
-            </header>
-        <div class="botonesbusqueda">
-            <input type="checkbox" class="checkoption" value="1" onclick="checkedOnClick(this);"> <span>RUT                </span>          
-            <input type="checkbox" class="checkoption" value="2" onclick="checkedOnClick(this);"> <span>Estado Civil       </span><br>
-            <input type="checkbox" class="checkoption" value="3" onclick="checkedOnClick(this);"> <span>Nacionalidad       </span>
-            <input type="checkbox" class="checkoption" value="4" onclick="checkedOnClick(this);"> <span>Fecha de nacimiento</span><br>
-            <input type="checkbox" class="checkoption" value="5" onclick="checkedOnClick(this);"> <span>Apellido paterno   </span>
-            <input type="checkbox" class="checkoption" value="6" onclick="checkedOnClick(this);"> <span>Comuna             </span><br>
-        <!-- Script -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-            <script type="text/javascript">
-                $(document).ready(function(){
-                $('.checkoption').click(function() {
-                    $('.checkoption').not(this).prop('checked', false);
-                });
-                });
-            </script>    
-        </div>
-
-    <div class="Busqueda">
-        <form action="" method= "get">
-            <p>ingrese el RUT:</p><input type="text" name="busquedarut">
-            <input type="submit" name="enviar" value="Buscar">
-        </form>
-    </div>
-            <!--TABLE-->
+        <h1>    Datos personales</h1>
             <div class="contenedor-datatable">
-
                 <!--TABLE HEADER ELEMENTS-->
                 <div class="datatable-header">
-
                     <!--BUTTONS & CHECKBOXS-->
-                    <div class="tools">
-                        <ul>
-                            <li>
-                                <button>
-                                    <span class="material-symbols-outlined"> Añadir </span>
-                                </button>
-                                
-                            </li>
-                            <li>
-                                <button>
-                                    <span class="material-symbols-outlined"> editar </span>      
-                                </button>                          
-                            </li>
-                            <li>
-                                <button>
-                                    <span class="material-symbols-outlined"> borrar </span>   
-                                </button>    
-                            </li>>
-                        </ul>
+                    <div class="botonesbusqueda">
+                        <input type="checkbox" class="checkoption" value="1" onclick="checkedOnClick(this);"><span>RUT                 </span><br>         
+                        <input type="checkbox" class="checkoption" value="2" onclick="checkedOnClick(this);"><span>Estado Civil        </span><br>
+                        <input type="checkbox" class="checkoption" value="3" onclick="checkedOnClick(this);"><span>Nacionalidad        </span><br>
+                        <input type="checkbox" class="checkoption" value="4" onclick="checkedOnClick(this);"><span>Fecha de nacimiento </span><br>
+                        <input type="checkbox" class="checkoption" value="5" onclick="checkedOnClick(this);"><span>Apellido paterno    </span><br>
+                        <input type="checkbox" class="checkoption" value="6" onclick="checkedOnClick(this);"><span>Comuna              </span><br>
+                    </div>
+                    <!--NAV SEARCH BAR-->
+
+                    <div class="Busqueda">
+                        <div class="busquedarut" display: none>
+                        <form action="" method= "get">
+                            <p>ingrese el RUT:</p><input type="text" name="busquedarut">
+                            <input type="submit" name="enviar" value="Buscar">
+                        </form>
+                        </div>
+                        <div class="busquedarestado">
+                        <form action="" method= "get">
+                            <p>ingrese el Estado Civil:</p><input type="text" name="busquedarut">
+                            <input type="submit" name="enviar" value="Buscar">
+                        </form>
+                        </div>
                     </div>
 
-                    <!--NAV SEARCH BAR-->
-                    <div class="navbar-search">
-                        <input type="text" name="#" id="#" class="input-search">
-                    </div>
 
                 </div>
-
                 <!--DATA TABLE-->
                 <table class="datatable">
                     <thead>
@@ -173,7 +145,13 @@
 
             </div>
         </div>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                $('.checkoption').click(function() {
+                $('.checkoption').not(this).prop('checked', false);});
+                });
+        </script>    
         
     </body>
 </html>

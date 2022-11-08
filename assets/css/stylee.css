@@ -14,8 +14,6 @@ body{
     /*background-image: url(Img/office.png);*/
     background-size: 160rem;
     background-repeat: no-repeat;
-    width: 50rem;
-    height: 40rem;
 }
 
 @media(min-width: 1920px){
@@ -29,85 +27,16 @@ body{
 .main-content{
     background-color: rgb(27, 51, 70);
     margin-left: 4rem;
-    width: 100%;
-    padding: 1rem 1rem 1rem 0.5rem!important;
 }
 
-/* .main-content .filters{
+.main-content .filters{
     display: flex;
-    background-color: rgba(221, 221, 247, 0.25);
     margin-left: 0.5rem;
     height: 38rem;
     width: 12rem;
     padding: 0!important;
     top: 2rem;
-} */
-
-
-
-/*------------------------------SIDE-MENU------------------------------*/
-.sidemenu{
-    position: fixed;  /*FIXED*/
-    width: 2rem;
-    height: 100%;
-    background-color: rgba(13, 131, 216, 0.817);
-    padding: 2rem;
-    transition: 0.5s;
-    overflow: hidden; /*Oculta texto del menú*/
 }
-
-.sidemenu:hover{
-    width: 12rem;
-}
-.sidemenu ul{
-    position: absolute;
-    left: 0;
-    /*top: 20px;*/
-    width: 100%;
-}
-
-.sidemenu ul li{
-    width: 100%;
-    list-style: none;
-    padding-left: 1rem; ;
-}
-
-li:hover{
-    background: rgb(83, 83, 83);
-    align-items: center;
-}
-
-.sidemenu ul li a{
-    display: flex;
-    text-decoration: none;
-    color: black;
-    height: 3.5rem;
-}
-
-.sidemenu ul li a .icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 2rem;
-}
-
-.sidemenu ul li a .nombremodulo{
-    display: flex;
-    align-items: center;
-    height: 3rem;
-    padding-left: 1.5rem;
-    font-size: 15px;
-}
-
-/*SIDEMENU END*/
-/* td{
-    background: #99d6f69c;
-    border:0px;
-}
-th{
-    background: #0c4d709c;  
-    border:0px;
-} */
 /*----------------------------------------DATA TABLES----------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
@@ -151,11 +80,11 @@ th{
     background-color: var(--dt-background-color-container);
     border-radius: var(--dt-border-radius);
     color: var(--dt-text-color);
-    width: 1150px;
-    margin-left: 0;
+    width: 80%;
     font-size: 12px;
     position: static;
     right: 2rem;
+    margin: 20px;
     
 }
 
@@ -272,6 +201,9 @@ th{
     width: 100%;
 }
 
+table {
+    width: 50%;
+}
 
 th td{
     padding: var(--dt-padding) var(--dt-padding);
