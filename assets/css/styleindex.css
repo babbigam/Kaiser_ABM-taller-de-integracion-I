@@ -34,12 +34,14 @@ body{
 #p1{
     display: grid;
     height: 500px;
+    background: #d8e3e9;
 }
 
 /*medidas y modalidad para el segundo contenedor de informacion*/
 #p2{
     display: grid;
     height: 500px;
+    background: #d8e3e9;
 }
 
 /*color, medidas para el pie de pagina*/
@@ -75,6 +77,11 @@ body{
     text-align: center;
 }
 
+.logo{
+    width: 33px;
+    height: 33px;
+}
+
 /*color y modalidad flex*/
 .menu{
     display: flex;
@@ -104,13 +111,24 @@ body{
     text-align: center;
     padding: 30px;
     margin: 20px;
-    background: #0f1c3d;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.599);
+    background: #192e63;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.599);
     border: 2px solid #000;
     grid-column-start: 1; 
     grid-column-end: 2; 
     grid-row-start: 1; 
     grid-row-end: 5;
+}
+
+.in-c{
+    width: 500px;
+    top: 900px;
+    left: 150px;
+    color: #c2c6ce;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /*modalidad, color, medidas fondo, diseño para la tarjeta con informacion*/
@@ -120,13 +138,24 @@ body{
     text-align: center;
     padding: 30px;
     margin: 20px;
-    background: #0f1c3d;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.599);
+    background: #192e63;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.599);
     border: 2px solid #000;
     grid-column-start: 2; 
     grid-column-end: 3; 
     grid-row-start: 1; 
     grid-row-end: 3;
+}
+
+.im1{
+    width: 500px;
+    top: 870px;
+    left: 900px;
+    color: #c2c6ce;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /*modalidad, color, medidas fondo, diseño para la tarjeta con informacion*/
@@ -136,13 +165,24 @@ body{
     text-align: center;
     padding: 30px;
     margin: 20px;
-    background: #0f1c3d;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.599);
+    background: #192e63;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.599);
     border: 2px solid #000;
     grid-column-start: 2; 
     grid-column-end: 3; 
     grid-row-start: 3; 
     grid-row-end: 5;
+}
+
+.im2{
+    width: 500px;
+    top: 1130px;
+    left: 900px;
+    color: #c2c6ce;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /*modalidad, color, medidas fondo, diseño para la tarjeta con informacion*/
@@ -153,7 +193,7 @@ body{
     padding: 30px;
     margin: 20px;
     background: #0f1c3d;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.599);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.599);
     border: 2px solid #000;
     background: #305280;
     grid-column-start: 1; 
@@ -170,7 +210,7 @@ body{
     padding: 30px;
     margin: 20px;
     background: #0f1c3d;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.599);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.599);
     border: 2px solid #000;
     background: #305280;
     grid-column-start: 2; 
@@ -180,7 +220,7 @@ body{
 }
 
 /*posicion, fondo, color, medidas y diseño para informacion del pie de pagina*/
-.conocer{
+.sucursales{
     position: absolute;
     background: #1a3069;
     color: #c0d0ef;
@@ -190,21 +230,11 @@ body{
 }
 
 /*posicion, fondo, color, medidas y diseño para informacion del pie de pagina*/
-.sucursales{
-    position: absolute;
-    background: #1a3069;
-    color: #c0d0ef;
-    top: 170px;
-    left: 400px;
-    border-bottom: 1px solid #000;
-}
-
-/*posicion, fondo, color, medidas y diseño para informacion del pie de pagina*/
 .correo{
     position: absolute;
     background: #1a3069;
     color: #c0d0ef;
-    top: 270px;
+    top: 170px;
     left: 400px;
     border-bottom: 1px solid #000;
 }
@@ -225,16 +255,6 @@ body{
     background: #1a3069;
     color: #c0d0ef;
     top: 170px;
-    left: 950px;
-    border-bottom: 1px solid #000;
-}
-
-/*posicion, fondo, color, medidas y diseño para informacion del pie de pagina*/
-.direccion{
-    position: absolute;
-    background: #1a3069;
-    color: #c0d0ef;
-    top: 270px;
     left: 950px;
     border-bottom: 1px solid #000;
 }
