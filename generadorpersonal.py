@@ -36,7 +36,7 @@ for i in range(10):
     primeros = random.choice((12,13,14,15,16,17,18))
     numero = random.randint(111111, 999999)
     rutificador = random.choice((0,1,2,3,4,5,6,7,8,9))
-    Nrut = str(primeros)+"."+str(numero)+" "+str(rutificador)
+    Nrut = str(primeros)+str(numero)+str(rutificador)
 
     #nombres
     name  =random.choice(BNombres)
@@ -48,8 +48,8 @@ for i in range(10):
     #
     Nacionalida = ["chileno","chileno","chileno","chileno","chileno","chileno","chileno","chileno","chileno","chileno","chileno","chileno","chileno","peruano","argentino",]
     naci = random.choice(Nacionalida)
-    calle = ["CAUPOLICÁN","ARTURO PRAT","LAUTARO","LOS NOTROS","LOS CANELOS","SAN MARTIN","LOS ROBLES","BERNARDO OHIGGINS","GALVARINO","PEDRO AGUIRRE CERDA","GABRIELA MISTRAL",
-    "PEDRO MONTT","LAUTARO","MANUEL RODRÍGUEZ","LOS ULMOS","LAS ROSAS","ANIBAL PINTO","CAUPOLICAN"]
+    calle = ["CaupolicáN","Arturo Prat","Lautaro","Los Notros","Los Canelos","San Martin","Los Robles","Bernardo Ohiggins","Galvarino","Pedro Aguirre Cerda","Gabriela Mistral",
+    "Pedro Montt","Lautaro","Manuel RodríGuez","Los Ulmos","Las Rosas","Anibal Pinto","Caupolican"]
     num = random.randint(10, 9999)
     direccio = random.choice(calle)+" #"+str(num)
 
@@ -59,7 +59,7 @@ for i in range(10):
     comuna = random.choice(Comun)
 
     cel = random.randint(60000000, 90000000)
-    Celular = "+569"+str(cel)
+    Celular = str(cel)
 
     Estado_civi = ["soltero", "casado"]
     estado =random.choice(Estado_civi)

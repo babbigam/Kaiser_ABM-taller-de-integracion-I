@@ -2,13 +2,6 @@
   require 'assets/js/sessionstart.php'; 
 ?>
 
-<?php
-    require 'localhost/ConBDPersonal.php';
-    $query = "SELECT * FROM `datos_personales`";
-    $result = mysqli_query($conn, $query);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,72 +11,72 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,-25" />
     <title>Datos personales</title>
 </head>
+<div> <?php require "assets/js/menuaside.php" ?></div>
 <body>
-        <div> <?php require "assets/js/menuaside.php" ?></div>
-        <header>    
-        </header>
+    <div class="main-content">
+        <div class="contenedor-datatable">
+            <!--TABLE HEADER ELEMENTS-->
+            <div class="datatable-header">
+                <!--CHECKBOXS-->
+                <div class="botonesbusqueda">
+                    <input type="checkbox" class="checkoption" id="1" onclick="checkedOnClick(this);"><span>RUT                 </span><br>         
+                    <input type="checkbox" class="checkoption" id="2" onclick="checkedOnClick(this);"><span>Estado Civil        </span><br>
+                    <input type="checkbox" class="checkoption" id="3" onclick="checkedOnClick(this);"><span>Nacionalidad        </span><br>
+                    <input type="checkbox" class="checkoption" id="4" onclick="checkedOnClick(this);"><span>Fecha de nacimiento </span><br>
+                    <input type="checkbox" class="checkoption" id="5" onclick="checkedOnClick(this);"><span>Apellido paterno    </span><br>
+                    <input type="checkbox" class="checkoption" id="6" onclick="checkedOnClick(this);"><span>Comuna              </span><br>
+                </div>
 
-        <div class="main-content">
-
-            <div class="contenedor-datatable">
-                <!--TABLE HEADER ELEMENTS-->
-                <div class="datatable-header">
-                    <!--BUTTONS & CHECKBOXS-->
-                    <div class="botonesbusqueda">
-                        <input type="checkbox" class="checkoption" id="1" onclick="checkedOnClick(this);"><span>RUT                 </span><br>         
-                        <input type="checkbox" class="checkoption" id="2" onclick="checkedOnClick(this);"><span>Estado Civil        </span><br>
-                        <input type="checkbox" class="checkoption" id="3" onclick="checkedOnClick(this);"><span>Nacionalidad        </span><br>
-                        <input type="checkbox" class="checkoption" id="4" onclick="checkedOnClick(this);"><span>Fecha de nacimiento </span><br>
-                        <input type="checkbox" class="checkoption" id="5" onclick="checkedOnClick(this);"><span>Apellido paterno    </span><br>
-                        <input type="checkbox" class="checkoption" id="6" onclick="checkedOnClick(this);"><span>Comuna              </span><br>
-                    </div>
-                    <!--NAV SEARCH BAR-->
-
-                    <div class="Busqueda">
-
-                        <div class="busquedarut" style="display: none">
-                            <form action="" method= "get">
-                                <p>ingrese el RUT:</p><input type="text" name="busquedarut">
-                               <input type="submit" name="enviar" value="Buscar">
+                        <div class="Busqueda">
+                            <div class="busquedarut" style="display: none">
+                                <form action="" method= "get">
+                                <p>ingrese el RUT:</p><input type="text" name="busqueda1">
+                                <input type="submit" name="enviar1" value="Buscar">
                             </form>
                         </div>
 
                         <div class="busquedarestado" style="display: none">
-                            <form action="" method= "get">
-                                <p>ingrese el Estado Civil:</p><input type="text" name="busqueda1">
-                                <input type="submit" name="enviar" value="Buscar">
+                                <form action="" method= "get">
+                                    <p>ingrese el Estado Civil:</p><input type="text" name="busqueda2">
+                                    <input type="submit" name="enviar2" value="Buscar">
                             </form>
                         </div>
                         <div class="busquedanacionalidad" style="display: none">
                             <form action="" method= "get">
-                                <p>ingrese la nacionalidad:</p><input type="text" name="busqueda2">
-                                <input type="submit" name="enviar" value="Buscar">
+                                <p>ingrese la nacionalidad:</p><input type="text" name="busqueda3">
+                                <input type="submit" name="enviar3" value="Buscar">
                             </form>
                         </div>
                         <div class="busquedafechanaci" style="display: none">
                             <form action="" method= "get">
-                                <p>ingrese la fecha de nacimiento:</p><input type="text" name="busqueda3">
-                                <input type="submit" name="enviar" value="Buscar">
+                                <p>ingrese la fecha de nacimiento:</p><input type="text" name="busqueda4">
+                                <input type="submit" name="enviar4" value="Buscar">
                             </form>
                         </div>
                         <div class="busquedaapellidopaterno" style="display: none">
                             <form action="" method= "get">
-                                <p>ingrese el apellido paterno:</p><input type="text" name="busqueda4">
-                                <input type="submit" name="enviar" value="Buscar">
+                                <p>ingrese el apellido paterno:</p><input type="text" name="busqueda5">
+                                <input type="submit" name="enviar5" value="Buscar">
                             </form>
                         </div>
                         <div class="busquedacomuna" style="display: none">
                             <form action="" method= "get">
-                                <p>ingrese la comuna:</p><input type="text" name="busqueda5">
-                                <input type="submit" name="enviar" value="Buscar">
+                                <p>ingrese la comuna:</p><input type="text" name="busqueda6">
+                                <input type="submit" name="enviar6" value="Buscar">
                             </form>
                         </div>
                     </div>
-
-
                 </div>
                 <!--DATA TABLE-->
                 <table class="datatable">
+
+                    <?php
+                        require 'localhost/ConBDPersonal.php';
+                            $query = "SELECT * FROM `datos_personales`";
+                            $result = mysqli_query($conn, $query);
+                        require 'localhost/closeBDPersonal.php';
+                    ?>
+
                     <thead>
                         <?php
                             if(mysqli_num_rows($result) > 0)
@@ -126,8 +119,6 @@
                             }
                         ?>
                     </thead>
-
-                    
                 </table>
 
                 <!--TABLE FOOTER ELEMENTS-->
