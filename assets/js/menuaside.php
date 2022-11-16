@@ -15,7 +15,7 @@
                         </span>
                         <div class="datosusuario">
                             <?php if(!empty($user)): ?>
-                            <span class="nombremodulo"> Bienvenido <?= $user['email']; ?> <?= $user['id']; ?> </span> 
+                            <span class="nombremodulo"> Bienvenido <?= $user['email']; ?></span> 
                             <!-- <a href="assets/js/logout.php">Cerrar sesion</a> -->
                             <?php else: ?>
                             <h2>No sesion existente</h2>
