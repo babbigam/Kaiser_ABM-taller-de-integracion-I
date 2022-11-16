@@ -7,7 +7,7 @@ html{
     position: fixed;  /*FIXED*/
     width: 2rem;
     height: 100%;
-    background-color: rgba(13, 131, 216, 0.817);
+    background-color: rgba(10, 108, 179, 0.817);
     padding: 2rem;
     transition: 0.5s;
     overflow: hidden; /*Oculta texto del menú*/
@@ -30,7 +30,7 @@ html{
 }
 
 li:hover{
-    background: rgb(83, 83, 83);
+    background: rgba(8, 66, 107, 0.817);
     align-items: center;
 }
 

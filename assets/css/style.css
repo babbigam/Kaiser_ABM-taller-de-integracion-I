@@ -3,24 +3,15 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-html{
     font-size: 24px;
 }
 
 body{
     font-size: 16px;
-    /*background-image: url(Img/office.png);*/
     background-size: 160rem;
     background-repeat: no-repeat;
 }
 
-@media(min-width: 1920px){
-    body{
-        background-size: 200rem;
-    }
-}
 
 /*----------------------------------------MAIN-CONTENT----------------------------------------*/
 
@@ -36,167 +27,6 @@ body{
     width: 12rem;
     padding: 0!important;
     top: 2rem;
-}
-/*----------------------------------------DATA TABLES----------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-
-/*----------Variables----------*/
-:root{
-    --primary-color:rgb(0, 0, 0);
-    --secondary-color: rgb(255, 255, 255);
-    --highlight-color: rgb(, 156, 177);
-    
-    --dt-status-available-color:green;
-    --dt-status-away-color: lightsalmon;
-    --dt-status-offline-color: lightgray;
-
-    --dt-padding: 12px;
-    --dt-padding-s: 6px;
-    --dt-padding-xs:2px;
-
-    --dt-border-radius:3px;
-
-    --dt-background-color-container: #99d6f69c;
-    --dt-border-color: var(--secondary-color);
-    --dt-bg-color:var(--highlight-color);
-    --dt-text-color:var(--primary-color);
-    --dt-bg-active-button: var(--highlight-color);
-    --dt-text-color-button: var(--primary-color);
-    --dt-text-color-active-button: var(--primary-color);
-    --dt-hover-cell-color: var(--highlight-color);
-    --dt-even-row-color: var(--secondary-color);
-    --dt-focus-color: var(--highlight-color);
-    --dt-input-background-color: var(--secondary-color);
-    --dt-input-color: var(--primary-color);
-}
-
-.material-icons{
-    font-size: 16px;
-}
-
-/*----------CONTENEDOR PRINCIPAL----------*/
-.contenedor-datatable{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: var(--dt-background-color-container);
-    border-radius: var(--dt-border-radius);
-    color: var(--dt-text-color);
-    width: 80%;
-    font-size: 12px;
-    position: static;
-    right: 2rem;
-    margin: 20px;
-    
-}
-
-/*----------DATA-TABLE-HEADER----------*/
-.contenedor-datatable .datatable-header{
-    border-bottom: solid 1px var(--dr-border-color);
-    padding: var(--dt-padding);
-    display: flex;
-    align-items: baseline;
-}
-
-.contenedor-datatable .datatable-header .navbar-search{
-    width: 30%;
-}
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' -25,
-  'opsz' 48
-}
-
-.contenedor-datatable .datatable-header .navbar-search .input-search{
-    width: 100%;
-    background-color: var(--dt-input-background-color);
-    display: block;
-    box-sizing: border-box;
-    border-radius: var(--dt-border-radius);
-    border: solid 1px var(--dt-border-color);
-    color: var(--dt-input-color);
-}
-
-.contenedor-datatable .datatable-header .tools{
-    width: 70%;
-}
-
-.contenedor-datatable .datatable-header .tools ul{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: start;
-    align-items: baseline;
-}
-
-.contenedor-datatable .datatable-header .tools ul li{
-    display: inline-block;
-    margin: 0 var(--dt-padding-xs);
-    align-items: baseline;
-}
-
-/*----------DATA-TABLE-FOOTER----------*/
-.contenedor-datatable .datatable-footer{
-    padding: var(--dt-padding);
-    display: flex;
-    align-items: baseline;
-}
-
-.contenedor-datatable .datatable-footer .pages ul li{
-    list-style:none;
-}
-
-.contenedor-datatable .datatable-footer .items-visibles{
-    width: 50%;
-}
-.contenedor-datatable .datatable-footer .pages{
-    margin-left: auto;
-    margin-right: 0;
-    width: 50%;
-}
-
-.contenedor-datatable .datatable-footer .pages ul{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: baseline;
-    justify-content: flex-end;
-}
-
-.contenedor-datatable .datatable-header .tools ul li button,
-.contenedor-datatable .datatable-footer .pages ul li button{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: var(--dt-text-color-button);
-    width: 100%;
-    box-sizing: border-box;
-    border: 0;
-    border-radius: var(--dt-border-radius);
-    background: transparent;
-    cursor: pointer;
-}
-
-.contenedor-datatable .datatable-header .tools ul li button:hover,
-.contenedor-datatable .datatable-footer .pages ul li button:hover{
-    background: var(--dt-bg-active-button);
-    color: var(--dt-text-color-active-button);
-}
-
-.contenedor-datatable .datatable-footer .pages ul li span .active{
-    background-color: var(--dt-bg-color);
-    border-radius: var(--dt-border-radius);
-}
-
-.contenedor-datatable .datatable-header .tools ul li button,
-.contenedor-datatable .datatable-footer .pages ul li button,
-.contenedor-datatable .datatable-footer .pages ul li span{
-    padding: var(--dt-padding-s) var(--dt-padding);
-}
-
-/*----------DATA-TABLE----------*/
-.contenedor-datatable .datatable{
-    border-collapse: collapse;
-    width: 100%;
 }
 
 th td{
@@ -226,11 +56,3 @@ td{
 .contenedor-datatable .datatable tbody tr:hover{
     background-color: var(--dt-hover-cell-color);
 }
-
-/*.contenedor-datatable .datatable tbody tr .en-funciones::after,
-.contenedor-datatable .datatable tbody tr .licencia::after,
-.contenedor-datatable .datatable tbody tr .vacaciones::after{
-    display: inline-table;
-    vertical-align: middle;
-}
-    ---COLUMNA ESTADO*/
