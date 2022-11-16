@@ -36,7 +36,7 @@ for i in range(10):
     primeros = random.choice((12,13,14,15,16,17,18))
     numero = random.randint(111111, 999999)
     rutificador = random.choice((0,1,2,3,4,5,6,7,8,9))
-    Nrut = str(primeros)+"."+str(numero)+"-"+str(rutificador)
+    Nrut = str(primeros)+"."+str(numero)+" "+str(rutificador)
 
     #nombres
     name  =random.choice(BNombres)
@@ -59,7 +59,7 @@ for i in range(10):
     comuna = random.choice(Comun)
 
     cel = random.randint(60000000, 90000000)
-    Celular = "+569 "+str(cel)
+    Celular = "+569"+str(cel)
 
     Estado_civi = ["soltero", "casado"]
     estado =random.choice(Estado_civi)

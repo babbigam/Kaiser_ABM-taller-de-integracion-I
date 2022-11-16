@@ -108,8 +108,6 @@ body{
   'opsz' 48
 }
 
-
-
 .contenedor-datatable .datatable-header .navbar-search .input-search{
     width: 100%;
     background-color: var(--dt-input-background-color);

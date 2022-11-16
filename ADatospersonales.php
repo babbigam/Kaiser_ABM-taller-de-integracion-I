@@ -14,7 +14,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/stylemenu.css"> 
-    <link rel="stylesheet" href="assets/css/stylee.css"> 
+    <link rel="stylesheet" href="assets/css/style.css"> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,-25" />
     <title>Datos personales</title>
 </head>
@@ -24,33 +24,59 @@
         </header>
 
         <div class="main-content">
-        <h1>    Datos personales</h1>
+
             <div class="contenedor-datatable">
                 <!--TABLE HEADER ELEMENTS-->
                 <div class="datatable-header">
                     <!--BUTTONS & CHECKBOXS-->
                     <div class="botonesbusqueda">
-                        <input type="checkbox" class="checkoption" value="1" onclick="checkedOnClick(this);"><span>RUT                 </span><br>         
-                        <input type="checkbox" class="checkoption" value="2" onclick="checkedOnClick(this);"><span>Estado Civil        </span><br>
-                        <input type="checkbox" class="checkoption" value="3" onclick="checkedOnClick(this);"><span>Nacionalidad        </span><br>
-                        <input type="checkbox" class="checkoption" value="4" onclick="checkedOnClick(this);"><span>Fecha de nacimiento </span><br>
-                        <input type="checkbox" class="checkoption" value="5" onclick="checkedOnClick(this);"><span>Apellido paterno    </span><br>
-                        <input type="checkbox" class="checkoption" value="6" onclick="checkedOnClick(this);"><span>Comuna              </span><br>
+                        <input type="checkbox" class="checkoption" id="1" onclick="checkedOnClick(this);"><span>RUT                 </span><br>         
+                        <input type="checkbox" class="checkoption" id="2" onclick="checkedOnClick(this);"><span>Estado Civil        </span><br>
+                        <input type="checkbox" class="checkoption" id="3" onclick="checkedOnClick(this);"><span>Nacionalidad        </span><br>
+                        <input type="checkbox" class="checkoption" id="4" onclick="checkedOnClick(this);"><span>Fecha de nacimiento </span><br>
+                        <input type="checkbox" class="checkoption" id="5" onclick="checkedOnClick(this);"><span>Apellido paterno    </span><br>
+                        <input type="checkbox" class="checkoption" id="6" onclick="checkedOnClick(this);"><span>Comuna              </span><br>
                     </div>
                     <!--NAV SEARCH BAR-->
 
                     <div class="Busqueda">
-                        <div class="busquedarut" display: none>
-                        <form action="" method= "get">
-                            <p>ingrese el RUT:</p><input type="text" name="busquedarut">
-                            <input type="submit" name="enviar" value="Buscar">
-                        </form>
+
+                        <div class="busquedarut" style="display: none">
+                            <form action="" method= "get">
+                                <p>ingrese el RUT:</p><input type="text" name="busquedarut">
+                               <input type="submit" name="enviar" value="Buscar">
+                            </form>
                         </div>
-                        <div class="busquedarestado">
-                        <form action="" method= "get">
-                            <p>ingrese el Estado Civil:</p><input type="text" name="busquedarut">
-                            <input type="submit" name="enviar" value="Buscar">
-                        </form>
+
+                        <div class="busquedarestado" style="display: none">
+                            <form action="" method= "get">
+                                <p>ingrese el Estado Civil:</p><input type="text" name="busqueda1">
+                                <input type="submit" name="enviar" value="Buscar">
+                            </form>
+                        </div>
+                        <div class="busquedanacionalidad" style="display: none">
+                            <form action="" method= "get">
+                                <p>ingrese la nacionalidad:</p><input type="text" name="busqueda2">
+                                <input type="submit" name="enviar" value="Buscar">
+                            </form>
+                        </div>
+                        <div class="busquedafechanaci" style="display: none">
+                            <form action="" method= "get">
+                                <p>ingrese la fecha de nacimiento:</p><input type="text" name="busqueda3">
+                                <input type="submit" name="enviar" value="Buscar">
+                            </form>
+                        </div>
+                        <div class="busquedaapellidopaterno" style="display: none">
+                            <form action="" method= "get">
+                                <p>ingrese el apellido paterno:</p><input type="text" name="busqueda4">
+                                <input type="submit" name="enviar" value="Buscar">
+                            </form>
+                        </div>
+                        <div class="busquedacomuna" style="display: none">
+                            <form action="" method= "get">
+                                <p>ingrese la comuna:</p><input type="text" name="busqueda5">
+                                <input type="submit" name="enviar" value="Buscar">
+                            </form>
                         </div>
                     </div>
 
@@ -148,10 +174,63 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
             <script type="text/javascript">
                 $(document).ready(function(){
-                $('.checkoption').click(function() {
-                $('.checkoption').not(this).prop('checked', false);});
+                    $('.checkoption').click(function() {
+                    $('.checkoption').not(this).prop('checked', false);
+                    });
                 });
         </script>    
-        
+        <script>
+            $(document).ready(function(){
+            $("#1").click(function(){
+                $(".busquedarut").show();
+                $(".busquedarestado").hide();
+                $(".busquedanacionalidad").hide();
+                $(".busquedafechanaci").hide();
+                $(".busquedaapellidopaterno").hide();
+                $(".busquedacomuna").hide();
+            });
+
+            $("#2").click(function(){
+                $(".busquedarestado").show();
+                $(".busquedarut").hide();
+                $(".busquedanacionalidad").hide();
+                $(".busquedafechanaci").hide();
+                $(".busquedaapellidopaterno").hide();
+                $(".busquedacomuna").hide();
+            });
+            $("#3").click(function(){
+                $(".busquedanacionalidad").show();
+                $(".busquedarut").hide();
+                $(".busquedarestado").hide();
+                $(".busquedafechanaci").hide();
+                $(".busquedaapellidopaterno").hide();
+                $(".busquedacomuna").hide();
+            });
+            $("#4").click(function(){
+                $(".busquedafechanaci").show();
+                $(".busquedarut").hide();
+                $(".busquedanacionalidad").hide();
+                $(".busquedarestado").hide();
+                $(".busquedaapellidopaterno").hide();
+                $(".busquedacomuna").hide();
+            });
+            $("#5").click(function(){
+                $(".busquedaapellidopaterno").show();
+                $(".busquedarut").hide();
+                $(".busquedanacionalidad").hide();
+                $(".busquedafechanaci").hide();
+                $(".busquedarestado").hide();
+                $(".busquedacomuna").hide();
+            });
+            $("#6").click(function(){
+                $(".busquedacomuna").show();
+                $(".busquedarut").hide();
+                $(".busquedanacionalidad").hide();
+                $(".busquedafechanaci").hide();
+                $(".busquedaapellidopaterno").hide();
+                $(".busquedarestado").hide();
+            });
+            });
+        </script>
     </body>
 </html>
